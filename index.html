@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<title>MacroTrack Free</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><h1>MacroTrack</h1><p>Free calorie & macro tracker</p></div><button id="settingsBtn">⚙️</button></header>
+
+<main>
+<section class="card hero">
+  <div class="ring"><div><b id="calories">0</b><span>/ <span id="goalCalories">2000</span> kcal</span></div></div>
+  <div class="macros">
+    <div><span>Protein</span><b id="protein">0g</b><small id="proteinGoal">/ 150g</small></div>
+    <div><span>Carbs</span><b id="carbs">0g</b><small id="carbsGoal">/ 200g</small></div>
+    <div><span>Fat</span><b id="fat">0g</b><small id="fatGoal">/ 65g</small></div>
+  </div>
+</section>
+
+<section class="actions">
+<button class="action" id="photoBtn">📸<b>Photo</b><small>Estimate food</small></button>
+<button class="action" id="barcodeBtn">▦<b>Barcode</b><small>Scan packaged food</small></button>
+<button class="action" id="searchBtn">🔎<b>Search</b><small>Find a food</small></button>
+</section>
+
+<section class="card">
+<h2>Today's Food</h2><div id="foodList" class="foodList"><p class="muted">Nothing logged yet.</p></div>
+</section>
+
+<section class="card">
+<h2>Quick Add</h2>
+<div class="quick">
+<button data-food='{"name":"Chicken breast","cal":280,"p":52,"c":0,"f":6}'>🍗 Chicken</button>
+<button data-food='{"name":"Eggs (2)","cal":144,"p":13,"c":1,"f":10}'>🥚 Eggs</button>
+<button data-food='{"name":"Rice (1 cup)","cal":205,"p":4,"c":45,"f":0}'>🍚 Rice</button>
+<button data-food='{"name":"Banana","cal":105,"p":1,"c":27,"f":0}'>🍌 Banana</button>
+</div>
+</section>
+</main>
+
+<div id="modal" class="modal hidden"><div class="modalBox"><button class="close" id="closeModal">✕</button><div id="modalContent"></div></div></div>
+<input id="photoInput" type="file" accept="image/*" capture="environment" hidden>
+
+<script src="app.js"></script>
+</body></html>
