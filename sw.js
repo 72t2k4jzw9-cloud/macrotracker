@@ -1,4 +1,4 @@
-const CACHE = "macrotrack-v2";
+const CACHE = "macrotrack-v3";
 
 self.addEventListener("install", event => {
   event.waitUntil(
