@@ -1,6 +1,12 @@
 const KEY = "macrotrack_v2";
 
-const todayKey = () => new Date().toISOString().slice(0,10);
+const todayKey = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
 
 let state = JSON.parse(localStorage.getItem(KEY) || "null") || {
   selectedDate: todayKey(),
